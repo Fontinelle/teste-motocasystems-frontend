@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { IoMdHome } from 'react-icons/io';
 
 export default function Header() {

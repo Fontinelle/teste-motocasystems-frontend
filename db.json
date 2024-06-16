@@ -1,0 +1,28 @@
+{
+  "motorcycles": [
+    {
+      "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
+      "code": "0001",
+      "model": "HONDA POP 110I",
+      "color": "BRANCO",
+      "value": "15000",
+      "status": "Em estoque"
+    },
+    {
+      "id": "19d1b8f0-5a26-4e96-aa34-1d5be1c8b742",
+      "code": "0002",
+      "model": "HONDA 500x",
+      "color": "VERMELHO",
+      "value": "50000",
+      "status": "Sem estoque"
+    },
+    {
+      "id": "20c9a3d8-2e71-45f3-bb09-8c8e4910a630",
+      "code": "0003",
+      "model": "HONDA CB 300F TWISTER",
+      "color": "PRETO",
+      "value": "30000",
+      "status": "Em trânsito"
+    }
+  ]
+}
