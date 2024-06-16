@@ -29,7 +29,9 @@ export default function Home() {
         (item) =>
           item.code.includes(searchTerm) ||
           item.model.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          item.color.toLowerCase().includes(searchTerm.toLowerCase())
+          item.color.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          item.value.includes(searchTerm) ||
+          item.status.includes(searchTerm)
       );
       setFilteredMotorcycles(filtered);
     }

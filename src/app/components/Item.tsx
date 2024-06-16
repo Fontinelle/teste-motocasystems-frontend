@@ -62,13 +62,13 @@ export function Item({ id, code, model, color, value, status }: Motorcycle) {
         </div>
       </div>
       <div className='flex gap-2'>
-        <span>
+        <a href='/'>
           <AiOutlineDelete
             size={30}
             className='cursor-pointer rounded-full p-1 text-red-500 hover:bg-red-500/30'
             onClick={handleDelete}
           />
-        </span>
+        </a>
         <a href={`/edit/${id}`}>
           <IoEyeOutline
             className='cursor-pointer rounded-full p-1 text-slate-200 hover:bg-slate-200/30'

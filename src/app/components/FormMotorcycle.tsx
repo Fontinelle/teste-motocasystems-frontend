@@ -2,8 +2,9 @@ import { Dispatch, SetStateAction } from 'react';
 import { Motorcycle } from '../types/motorcycle';
 import editMotorcycle from '../services/editMotorcycle';
 import Label from './Label';
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus, FaRegArrowAltCircleUp } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import registerMotorcycle from '../services/registerMotorcycle';
 
 export default function FormMotorcycle({
   motorcycle,
@@ -24,7 +25,7 @@ export default function FormMotorcycle({
       !motorcycle.model ||
       !motorcycle.color ||
       !motorcycle.value ||
-      motorcycle.status === 'Selecione um status'
+      motorcycle.status === ''
     ) {
       alert('Preencha todos os campos');
       return;
@@ -38,8 +39,11 @@ export default function FormMotorcycle({
       await editMotorcycle(motorcycle);
       alert('Moto editada com sucesso!');
       router.push('/');
-    } else {
-      //cadastro
+    }
+    if (type === 'register') {
+      await registerMotorcycle(motorcycle);
+      alert('Moto registrada com sucesso!');
+      router.push('/');
     }
   };
 
@@ -96,7 +100,7 @@ export default function FormMotorcycle({
             setMotorcycle({ ...motorcycle, status: e.target.value })
           }
         >
-          <option value=''>Selecione o status</option>
+          <option value=''></option>
           <option value='Em estoque'>Em estoque</option>
           <option value='Sem estoque'>Sem estoque</option>
           <option value='Em trânsito'>Em trânsito</option>
@@ -107,8 +111,17 @@ export default function FormMotorcycle({
         className='flex items-center justify-center gap-2 rounded bg-blue-400 px-4 py-3 text-xs font-semibold uppercase text-white transition-colors hover:bg-blue-500'
         type='submit'
       >
-        <FaPlus size={18} />
-        {' Registrar'}
+        {type === 'register' ? (
+          <>
+            <FaPlus size={18} />
+            {' Registrar'}
+          </>
+        ) : (
+          <>
+            <FaRegArrowAltCircleUp size={18} />
+            {' Atualizar'}
+          </>
+        )}
       </button>
     </form>
   );
