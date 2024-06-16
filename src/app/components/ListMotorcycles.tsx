@@ -1,5 +1,5 @@
 import { Item } from './Item';
-import { Motocycles } from '../types/motocycle';
+import { Motorcycles } from '../types/motorcycle';
 import { Dispatch, SetStateAction } from 'react';
 import Search from './Search';
 
@@ -7,7 +7,7 @@ export default function ListMotorcycles({
   filteredMotorcycles,
   setSearchTerm,
 }: {
-  filteredMotorcycles: Motocycles;
+  filteredMotorcycles: Motorcycles;
   setSearchTerm: Dispatch<SetStateAction<string>>;
 }) {
   return (

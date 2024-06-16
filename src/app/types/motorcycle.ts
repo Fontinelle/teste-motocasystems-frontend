@@ -1,4 +1,4 @@
-export type Motocycle = {
+export type Motorcycle = {
   id?: string;
   code: string;
   model: string;
@@ -7,4 +7,4 @@ export type Motocycle = {
   status: string;
 };
 
-export type Motocycles = Motocycle[];
+export type Motorcycles = Motorcycle[];

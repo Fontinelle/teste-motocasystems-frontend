@@ -1,4 +1,4 @@
-import { Motocycle } from '../types/motocycle';
+import { Motorcycle } from '../types/motorcycle';
 import deleteMotorcycle from '../services/deleteMotorcycle';
 import { AiOutlineDelete } from 'react-icons/ai';
 import { IoEyeOutline } from 'react-icons/io5';
@@ -24,7 +24,7 @@ function getStatusClass(status: string) {
   }
 }
 
-export function Item({ id, code, model, color, value, status }: Motocycle) {
+export function Item({ id, code, model, color, value, status }: Motorcycle) {
   const router = useRouter();
   const valueFormatted = formatValue(Number(value));
   const statusClass = getStatusClass(status);
@@ -62,16 +62,18 @@ export function Item({ id, code, model, color, value, status }: Motocycle) {
         </div>
       </div>
       <div className='flex gap-2'>
-        <AiOutlineDelete
-          size={30}
-          className='cursor-pointer rounded-full p-1 text-red-500 hover:bg-red-500/30'
-          onClick={handleDelete}
-        />
-        <a
-          href={`/edit/${id}`}
-          className='cursor-pointer rounded-full p-1 text-slate-200 hover:bg-slate-200/30'
-        >
-          <IoEyeOutline size={30} />
+        <span>
+          <AiOutlineDelete
+            size={30}
+            className='cursor-pointer rounded-full p-1 text-red-500 hover:bg-red-500/30'
+            onClick={handleDelete}
+          />
+        </span>
+        <a href={`/edit/${id}`}>
+          <IoEyeOutline
+            className='cursor-pointer rounded-full p-1 text-slate-200 hover:bg-slate-200/30'
+            size={30}
+          />
         </a>
       </div>
     </div>

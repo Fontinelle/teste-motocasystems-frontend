@@ -2,13 +2,13 @@
 import Header from './components/Header';
 import ListMotorcycles from './components/ListMotorcycles';
 import { useEffect, useState } from 'react';
-import { Motocycles } from './types/motocycle';
+import { Motorcycles } from './types/motorcycle';
 import listMotorcycles from './services/listMotorcycles';
 
 export default function Home() {
-  const [motorcycles, setMotorcycles] = useState<Motocycles>([]);
+  const [motorcycles, setMotorcycles] = useState<Motorcycles>([]);
 
-  const [filteredMotorcycles, setFilteredMotorcycles] = useState<Motocycles>(
+  const [filteredMotorcycles, setFilteredMotorcycles] = useState<Motorcycles>(
     []
   );
   const [searchTerm, setSearchTerm] = useState<string>('');

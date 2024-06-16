@@ -1,12 +1,12 @@
 {
   "motorcycles": [
     {
-      "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
       "code": "0001",
       "model": "HONDA POP 110I",
       "color": "BRANCO",
-      "value": "15000",
-      "status": "Em estoque"
+      "value": "15002",
+      "status": "Em estoque",
+      "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed"
     },
     {
       "id": "19d1b8f0-5a26-4e96-aa34-1d5be1c8b742",
